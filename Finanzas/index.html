@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Presupuesto Familiar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Control de Presupuesto Familiar</h1>
+
+        <div class="balance">
+            <h2>Saldo Disponible: $<span id="saldo">0.00</span></h2>
+        </div>
+
+        <div class="form">
+            <h3>Ingreso Mensual</h3>
+            <input type="number" id="ingreso" placeholder="Cantidad en $" min="0">
+            <button onclick="editarIngreso()">Guardar Ingreso</button>
+        </div>
+
+        <div class="form">
+            <h3>Agregar Gasto</h3>
+            <input type="text" id="tituloGasto" placeholder="Título del gasto">
+            <input type="number" id="montoGasto" placeholder="Cantidad en $" min="0">
+            <button onclick="agregarGasto()">Añadir Gasto</button>
+        </div>
+
+        <h3>Lista de Gastos</h3>
+        <ul id="listaGastos"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
